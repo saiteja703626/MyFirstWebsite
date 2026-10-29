@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles/game.css">
+</head>
+
+<body>
+  <h1 class="heading">Rock Paper Scissors</h1>
+  <p>
+    <button class="emoji-button"><img src="images/rock-emoji.png"
+        class="emoji-icon js-rock-button"></button>
+    <button class="emoji-button"><img src="images/paper-emoji.png"
+        class="emoji-icon js-paper-button"></button>
+    <button class="emoji-button"><img src="images/scissors-emoji.png"
+        class="emoji-icon js-scissors-button"></button>
+    <!-- <p onclick="console.log(score.wins)">wins:`${score.wins}`</p>
+    <p onclick="console.log(score.loses)">loses:</p>
+    <p onclick="console.log(score.draws)">draws:</p> -->
+  </p>
+
+  <p class="js-result result"></p>
+  <p class="js-moves moves"></p>
+
+
+  <p class="js-score"></p>
+
+  <p>
+    <button class="reset-score"
+      onclick="score.wins=0;score.loses=0;score.draws=0;localStorage.removeItem('score'); updateScoreElement();">Reset
+      Score</button>
+      <button class="auto-play-button" onclick="
+      autoPlay();
+      document.querySelector('.auto-play-button').innerHTML='Stop Play'
+      ">Auto Play</button>
+  </p>
+
+  <script src="scripts/game.js">
+  </script>
+</body>
+
+</html>

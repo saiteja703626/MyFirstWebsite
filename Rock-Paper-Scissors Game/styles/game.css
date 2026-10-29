@@ -1,0 +1,51 @@
+html {
+  background-color: black;
+}
+
+.heading {
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+}
+
+.js-score,
+.js-moves {
+  color: white;
+  font-family: arial;
+}
+
+.reset-score {
+  padding: 5px 10px;
+}
+
+.emoji-icon {
+  height: 50px;
+  padding: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid white;
+  color: white;
+}
+
+.emoji-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+}
+
+.result {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.reset-score,.auto-play-button {
+  padding: 8px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+}
