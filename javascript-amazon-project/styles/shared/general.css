@@ -99,3 +99,95 @@ select:focus,
 input:focus {
   outline: 2px solid rgb(255, 153, 0);
 }
+
+.lounge-banner {
+    display: block;
+    width: 100%;
+    height: 24px;
+    overflow: hidden;
+    background: #c5f277;
+    color: #172010;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.banner-track {
+    display: flex;
+    width: max-content;
+    animation: lounge-scroll 22s linear infinite;
+}
+
+.banner-track span {
+    flex-shrink: 0;
+    padding-right: 30px;
+}
+
+.lounge-banner:hover .banner-track {
+    animation-play-state: paused;
+}
+
+@keyframes lounge-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .banner-track {
+        animation: none;
+    }
+}
+
+.lounge-banner {
+  display: block;
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  height: 20px;
+  overflow: hidden;
+  background-color: #c5f277;
+  color: #172010;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.banner-track {
+  display: flex;
+  width: max-content;
+  animation: lounge-scroll 22s linear infinite;
+}
+
+.banner-track span {
+  flex-shrink: 0;
+  padding-right: 30px;
+}
+
+.lounge-banner:hover .banner-track {
+  animation-play-state: paused;
+}
+
+@keyframes lounge-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner-track {
+    animation: none;
+  }
+}

@@ -2,6 +2,28 @@ html {
   background-color: black;
 }
 
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Centre the game */
+.game-container {
+  min-height: calc(100vh - 24px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.heading {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+}
+
 .heading {
 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -41,11 +63,74 @@ html {
   font-size: 25px;
 }
 
-.reset-score,.auto-play-button {
+.reset-score,
+.auto-play-button {
   padding: 8px 15px;
   font-size: 15px;
   cursor: pointer;
   background-color: white;
   border: none;
   border-radius: 5px;
+}
+
+.lounge-link {
+  display: inline-block;
+  padding: 8px 14px;
+  margin-right: 16px;
+  color: #c5f277;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(197, 242, 119, 0.4);
+  border-radius: 20px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.lounge-link:hover {
+  background: #c5f277;
+  color: #101310;
+}
+
+.lounge-banner {
+  display: block;
+  width: 100%;
+  height: 24px;
+  overflow: hidden;
+  background: #c5f277;
+  color: #172010;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.banner-track {
+  display: flex;
+  width: max-content;
+  animation: lounge-scroll 22s linear infinite;
+}
+
+.banner-track span {
+  flex-shrink: 0;
+  padding-right: 30px;
+}
+
+.lounge-banner:hover .banner-track {
+  animation-play-state: paused;
+}
+
+@keyframes lounge-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner-track {
+    animation: none;
+  }
 }

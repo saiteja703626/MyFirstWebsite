@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,18 @@
 </head>
 
 <body>
+    <a href="/" class="lounge-banner" aria-label="Return to Lounge homepage">
+        <span class="banner-track">
+            <span>
+                ← Click on this banner to go to Lounge page ·
+                Thanks for visiting the Cafe Project! ·
+            </span>
+            <span aria-hidden="true">
+                ← Click on this banner to go to Lounge page ·
+                Thanks for visiting the Cafe Project! ·
+            </span>
+        </span>
+    </a>
 
     <!-- Header -->
     <header>
@@ -41,7 +54,7 @@
         <section class="about-story">
 
             <div class="about-image">
-                <img src="images/cafe-interior.jpg" alt="Inside our cafe">
+                <img src="images/story.webp" alt="Inside our cafe">
             </div>
 
             <div class="about-content">
@@ -71,20 +84,20 @@
 
                 <div>
                     <h3>Address</h3>
-                    <p>32 Skipton St</p>
+                    <p>St num and name</p>
                     <p>Ballarat Central VIC 3350</p>
                 </div>
 
 
                 <div>
                     <h3>Phone</h3>
-                    <p>0423 534 083</p>
+                    <p>0412 345 678</p>
                 </div>
 
 
                 <div>
                     <h3>Email</h3>
-                    <p>hello@ourcafe.com</p>
+                    <p>hi@ourcafe.com</p>
                 </div>
 
             </div>
@@ -104,19 +117,29 @@
 
 
         <!-- Location -->
-        <section class="location">
+        <section class="location" id="find-us">
 
             <h2>Find Us</h2>
 
             <p>
-                32 Skipton St, Ballarat Central VIC 3350
+                St, Ballarat Central VIC 3350
             </p>
 
             <!-- Google Maps can be embedded here later -->
 
             <div class="map">
-                <p>Google Maps</p>
+                <iframe
+                    src="https://maps.google.com/maps?q=Ballarat%20Railway%20Station%2C%20Ballarat%20VIC%203350&z=16&output=embed"
+                    width="100%" height="400" style="border:0;" allowfullscreen loading="lazy">
+                </iframe>
             </div>
+
+            <p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Ballarat+Railway+Station+Ballarat+VIC+3350"
+                    target="_blank" rel="noopener noreferrer">
+                    Get Directions
+                </a>
+            </p>
 
         </section>
 
@@ -134,4 +157,5 @@
     </footer>
 
 </body>
+
 </html>

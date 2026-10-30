@@ -130,7 +130,7 @@ nav {
 .hero a {
   display: inline-block;
 
-  background-color: #d7a86e;
+  background-color: #B09D7C;
   color: #3e2723;
 
   padding: 14px 28px;
@@ -241,7 +241,7 @@ h2 {
 .opening-hours {
   text-align: center;
 
-  background-color: #ead8c0;
+  
 }
 
 .opening-hours p {
@@ -253,7 +253,7 @@ h2 {
 
   margin-top: 20px;
 
-  background-color: #3e2723;
+  background-color: #B09D7C;
   color: white;
 
   padding: 12px 25px;
@@ -273,20 +273,20 @@ h2 {
    ========================= */
 
 .page-header {
-  background-color: #ead8c0;
+  background-color: #516E50;
   padding: 70px 30px;
   padding-top: 150px;
 }
 
 .page-header h1 {
   font-size: 44px;
-  color: #3e2723;
+  color: white;
   margin-bottom: 10px;
 }
 
 .page-header p {
   text-align: center;
-  color: #666;
+  color: white;
   font-size: 18px;
 }
 
@@ -455,6 +455,29 @@ h2 {
 }
 
 
+.map {
+    width: 100%;
+    max-width: 900px;
+    margin: 25px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.map iframe {
+    display: block;
+    width: 100%;
+    height: 400px;
+    border: 0;
+}
+
+.location {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+
+
 /* =========================
    GALLERY
    ========================= */
@@ -494,7 +517,7 @@ h2 {
    ========================= */
 
 footer {
-  background-color: #3e2723;
+  background-color: #516E50;
   color: white;
 
   padding: 30px;
@@ -630,4 +653,49 @@ footer a:hover {
     height: 280px;
   }
 
+}
+
+.lounge-banner {
+    display: block;
+    width: 100%;
+    height: 24px;
+    overflow: hidden;
+    background: #c5f277;
+    color: #172010;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.banner-track {
+    display: flex;
+    width: max-content;
+    animation: lounge-scroll 22s linear infinite;
+}
+
+.banner-track span {
+    flex-shrink: 0;
+    padding-right: 30px;
+}
+
+.lounge-banner:hover .banner-track {
+    animation-play-state: paused;
+}
+
+@keyframes lounge-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .banner-track {
+        animation: none;
+    }
 }
