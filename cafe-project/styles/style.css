@@ -59,7 +59,7 @@ nav {
 .logo a {
   font-size: 28px;
   font-weight: bold;
-  color: white;
+  color: #f8f1d8;
 }
 
 .nav-links {
@@ -70,7 +70,7 @@ nav {
 }
 
 .nav-links a {
-  color: white;
+  color: black;
   font-size: 16px;
 
   transition: 0.3s;
@@ -102,14 +102,14 @@ nav {
 }
 
 .hero-logo {
-  width: 300px;
+  width: 400px;
   flex-shrink: 0;
 }
 
 .hero-logo img {
   width: 100%;
   height: auto;
-  padding-right: 100px;
+  display: block;
 }
 
 .hero-content {
@@ -130,7 +130,7 @@ nav {
 .hero a {
   display: inline-block;
 
-  background-color: #B09D7C;
+  background-color: #f8f1d8;
   color: #3e2723;
 
   padding: 14px 28px;
@@ -143,6 +143,7 @@ nav {
 
 .hero a:hover {
   background-color: #c0955c;
+  color: white;
 }
 
 /* =========================
@@ -240,7 +241,7 @@ h2 {
 
 .opening-hours {
   text-align: center;
-
+  background-color: white;
   
 }
 
@@ -250,11 +251,12 @@ h2 {
 
 .opening-hours a {
   display: inline-block;
+  font-weight: bolder;
 
   margin-top: 20px;
 
-  background-color: #B09D7C;
-  color: white;
+  background-color: #f8f1d8;
+  color: black;
 
   padding: 12px 25px;
 
@@ -264,7 +266,8 @@ h2 {
 }
 
 .opening-hours a:hover {
-  background-color: #5d4037;
+  background-color: #c0955c;
+  color: white;
 }
 
 
@@ -698,4 +701,219 @@ footer a:hover {
     .banner-track {
         animation: none;
     }
+}
+
+/* MOBILE NAVIGATION */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 27px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(81, 110, 80, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 0 0 15px 15px;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px;
+        color: white;
+    }
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+
+  section {
+    padding: 60px 20px;
+  }
+
+
+  .featured-items {
+    grid-template-columns: 1fr;
+  }
+
+
+  .menu-item {
+    align-items: flex-start;
+  }
+
+
+  .about-story {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-image img {
+    height: 350px;
+  }
+
+  .about-content h2 {
+    text-align: center;
+  }
+
+
+  .contact-details {
+    grid-template-columns: 1fr;
+  }
+
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .gallery-item img {
+    height: 220px;
+  }
+
+
+  .page-header h1 {
+    font-size: 36px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .logo a {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item img {
+    height: 280px;
+  }
+
+}
+
+/* =========================
+   MOBILE RESPONSIVE - HERO
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .hero-logo {
+    width: 200px;
+    max-width: 70%;
+    flex-shrink: 1;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .hero a {
+    padding: 12px 24px;
+  }
+
 }

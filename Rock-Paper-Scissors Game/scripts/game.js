@@ -26,18 +26,37 @@ const autoPlay = () => {
 };
 */
 
+// function autoPlay() {
+//   if (!isAutoPlaying) {
+//     intervalId = setInterval(() => {
+//       const playerMove = pickComputerMove();
+//       playGame(playerMove);
+//     }, 1000);
+//     isAutoPlaying = true;
+//   } else {
+//     clearInterval(intervalId);
+//     isAutoPlaying = false;
+//   }
+
+// }
+
 function autoPlay() {
+  const autoPlayButton = document.querySelector('.auto-play-button');
+
   if (!isAutoPlaying) {
     intervalId = setInterval(() => {
       const playerMove = pickComputerMove();
       playGame(playerMove);
     }, 1000);
+
     isAutoPlaying = true;
+    autoPlayButton.innerHTML = 'Stop Play';
+
   } else {
     clearInterval(intervalId);
     isAutoPlaying = false;
+    autoPlayButton.innerHTML = 'Auto Play';
   }
-
 }
 
 document.querySelector('.js-rock-button').addEventListener('click', () => {

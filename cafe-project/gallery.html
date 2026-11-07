@@ -24,13 +24,20 @@
 
     <!-- Header -->
     <header>
-        <nav>
+        <nav class="navbar">
 
             <div class="logo">
-                <a href="index.html">Our Cafe</a>
+                <a href="index.html">Bean Heaven</a>
             </div>
 
-            <ul class="nav-links">
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="about.html">About & Contact</a></li>
@@ -54,35 +61,35 @@
         <section class="gallery">
 
             <div class="gallery-item">
-                <img src="Images/coffee.webp" alt="Coffee">
+                <img src="images/coffee.webp" alt="Coffee">
             </div>
 
             <div class="gallery-item">
-                <img src="Images/latte.jpg" alt="Latte">
+                <img src="images/latte.jpg" alt="Latte">
             </div>
 
             <div class="gallery-item">
-                <img src="Images/bf1.jpg" alt="Breakfast">
+                <img src="images/bf1.jpg" alt="Breakfast">
             </div>
 
             <div class="gallery-item">
-                <img src="Images/bf2.jpg" alt="Cafe breakfast">
+                <img src="images/bf2.jpg" alt="Cafe breakfast">
             </div>
 
             <div class="gallery-item">
-                <img src="Images/cafefood.jpg" alt="Cafe food">
+                <img src="images/cafefood.jpg" alt="Cafe food">
             </div>
 
             <div class="gallery-item">
-                <img src="Images/lunch.jpg" alt="Lunch">
+                <img src="images/lunch.jpg" alt="Lunch">
             </div>
 
             <div class="gallery-item">
-                <img src="Images/interior.webp" alt="Cafe interior">
+                <img src="images/interior.webp" alt="Cafe interior">
             </div>
 
             <div class="gallery-item">
-                <img src="Images/seating.webp" alt="Cafe seating">
+                <img src="images/seating.webp" alt="Cafe seating">
             </div>
 
         </section>
@@ -92,13 +99,16 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Our Cafe. All rights reserved.</p>
+        <p>&copy; 2026 Bean Heaven. All rights reserved.</p>
 
         <div>
             <a href="#">Instagram</a>
             <a href="#">Facebook</a>
         </div>
     </footer>
+
+    <script src="scripts/navigation.js"></script>
+
 
 </body>
 

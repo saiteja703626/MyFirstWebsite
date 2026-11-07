@@ -24,13 +24,20 @@
 
     <!-- Header -->
     <header>
-        <nav>
+        <nav class="navbar">
 
             <div class="logo">
-                <a href="index.html">Our Cafe</a>
+                <a href="index.html">Bean Heaven</a>
             </div>
 
-            <ul class="nav-links">
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="about.html">About & Contact</a></li>
@@ -178,13 +185,15 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Our Cafe. All rights reserved.</p>
+        <p>&copy; 2026 Bean Heaven. All rights reserved.</p>
 
         <div>
             <a href="#">Instagram</a>
             <a href="#">Facebook</a>
         </div>
     </footer>
+
+    <script src="scripts/navigation.js"></script>
 
 </body>
 
